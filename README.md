@@ -12,7 +12,6 @@ This is a solution to the [Huddle landing page with curved sections challenge on
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -27,12 +26,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
+the path for sceenshot of my solution for desktop view: screenshot-of-my-solution\huddle landing page desktop view.png
+the path for sceenshot of my solution for mobile view: screenshot-of-my-solution\huddle landing page mobile view.png
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site url](https://aemrobe.github.io/Huddle-landing-page-with-curved-section-challenge/)
+- Solution URL: [solution URL ](https://your-solution-url.com)
+- Live Site URL: [live site URL](https://aemrobe.github.io/huddle-with-curved-section/)
 
 ## My process
 
@@ -41,58 +42,93 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+in this challenge I have learned that how can I use pseudo element to add unique shapes to your website.
 
-To see how you can add code snippets, see below:
+to see how we can add code snippets to add unique shapes to our website.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+- I want to add curved shape at the top and bottom of this div element with a class of service.
+
+```
+HTML
+ <div class="service service-1">
+        <div class="wrapper">
+          <img
+            class="service-img"
+            src="./images/illustration-grow-together.svg"
+            alt=""
+          />
+          <div class="service__wrapper">
+            <h2 class="service__heading">Grow Together</h2>
+            <p class="service__text">
+              Generate meaningful discussions with your audience and build a
+              strong, loyal community. Think of the insightful conversations you
+              miss out on with a feedback form.
+            </p>
+          </div>
+        </div>
+  </div>
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
+- inorder to add the curved shape at the top of this div element with a class of service. I will create the before pseudo element next I will give height to it then I will add the curved shape image as the background image inside the pseduo element finally, I will position the pseudo element outside the parent element using position absolute .
+
+```
+  CSS
+  .service-1 {
+  background: var(--Very-Pale-Blue);
+  position: relative;
+}
+
+/*it will add the curved shape at the top of the div element*/
+
+.service-1::before {
+  content: "";
+  background: url("../images/bg-section-top-mobile-1.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+- we can use the same method to add the curved shape at the bottom of this div element the only difference is we use the after pseudo element instead.
+
 ```
+CSS
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+/*it will add the curved shape at the bottom of the div element*/
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+.service-1::after {
+  content: "";
+  background: url("../images/bg-section-bottom-mobile-1.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 100%;
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+for the future projects I want to sharpen my skill in css grid css animation and I also want to learn javascript.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@aemrobe](https://www.frontendmentor.io/profile/aemrobe)
+- Twitter - [@Aemro112](https://www.twitter.com/Aemro112)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I really want to thank @Grace from frontendmentor she has helped me how can I create the curved shape using the pseudo elements. I also want to thanks my teammates who have always helped me when I am stuck on something to work on the project.
