@@ -32,7 +32,7 @@ the path for sceenshot of my solution for mobile view: screenshot-of-my-solution
 
 ### Links
 
-- Solution URL: [solution URL ](https://your-solution-url.com)
+- Solution URL: [solution URL ](https://www.frontendmentor.io/solutions/responsive-huddle-landing-page-with-curved-section-only-by-flexbox-8wNAn8VTj5)
 - Live Site URL: [live site URL](https://aemrobe.github.io/huddle-with-curved-section/)
 
 ## My process
