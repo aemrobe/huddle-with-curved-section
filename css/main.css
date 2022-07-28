@@ -41,8 +41,9 @@ img {
 
 /*body setup*/
 header {
-  padding: 20px 25px 100px;
+  padding: 20px 25px 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -50,6 +51,10 @@ header {
 .logo {
   width: 96px;
   height: 20px;
+}
+
+header .logo {
+  margin-bottom: 20px;
 }
 
 .try-btn {
@@ -60,6 +65,7 @@ header {
   color: var(--Pink);
   font-family: var(--ff-Open-Sans);
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
 
 .main-title {
@@ -100,7 +106,7 @@ header {
 .device-image {
   margin: 0 auto 122px;
   width: 80%;
-  max-width: 1153px;
+  max-width: 1030px;
 }
 
 .status {
@@ -130,11 +136,14 @@ header {
   color: hsl(192, 2%, 51%);
 }
 
+.wrapper {
+  padding: 85px 17px;
+}
+
 .service-img {
-  padding: 91px 55px 82px;
-  padding: 85px 55px 80px;
+  padding-bottom: 80px;
   margin: 0 auto;
-  height: 400px;
+  max-height: 400px;
 }
 
 .service__heading {
@@ -142,17 +151,19 @@ header {
   font-family: var(--ff-Poppins);
   font-weight: 700;
   text-align: center;
+  padding: 0;
 }
 
 .service__text {
-  padding: 20px 40px 106px;
+  padding: 20px 0 106px;
   margin: 0px auto;
-  max-width: 708px;
+  max-width: 588px;
   font-family: var(--ff-Poppins);
   font-weight: 400;
   font-size: 14px;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.5;
+  color: var(--Very-Dark-Cyan);
 }
 
 .service-1 {
@@ -171,6 +182,7 @@ header {
   height: 100px;
   position: absolute;
   bottom: 100%;
+  left: 0;
 }
 
 .service-1::after {
@@ -187,7 +199,7 @@ header {
 }
 
 .service-1 .service__text {
-  padding: 20px 31px 106px;
+  padding: 20px 0 106px;
 }
 
 .service-2 {
@@ -195,7 +207,7 @@ header {
 }
 
 .service-2 .service__text {
-  padding: 20px 20px 217px;
+  padding: 20px 0px 117px;
 }
 
 .service-3 {
@@ -216,7 +228,7 @@ header {
   position: absolute;
   bottom: 100%;
 }
-/**/
+
 .service-3::after {
   content: "";
   background: url("../images/bg-section-bottom-mobile-2.svg");
@@ -231,7 +243,7 @@ header {
 }
 
 .service-3 .service__text {
-  padding: 26px 17px 107px;
+  padding: 26px 0 107px;
 }
 
 .question {
@@ -301,11 +313,9 @@ footer::before {
 
 .subscribe-btn button[type="submit"] {
   border: none;
-  margin-top: 12px;
   margin: 12px 0px 101px;
   font-size: 15px;
-  padding: 12px 0px;
-  width: 160px;
+  padding: 12px 45px;
   font-family: var(--ff-Open-Sans);
   font-weight: 600;
   background: var(--Pink);
@@ -336,8 +346,14 @@ footer::before {
 
 .tel-number img,
 .email img {
+  margin-bottom: 8px;
+}
+
+.tel-number span,
+.email span {
   display: inline;
-  margin-right: 18px;
+  margin-left: 18px;
+  margin-bottom: 8px;
 }
 
 .social-media-icons {
@@ -397,7 +413,7 @@ footer::before {
 
 @media (min-width: 1440px) {
   header {
-    max-width: 2000px;
+    max-width: 1667px;
     margin: 0px auto;
     padding: 77px 79px 236px;
   }
@@ -623,5 +639,46 @@ footer::before {
   .social-media-icon i {
     font-size: 31px;
     margin-right: 23px;
+  }
+}
+
+@media (max-width: 245px) {
+  header {
+    flex-direction: column;
+  }
+
+  .subscribe-btn {
+    align-items: center;
+  }
+
+  .subscribe-btn * {
+    width: 100%;
+  }
+
+  .subscribe-btn button[type="submit"] {
+    align-self: unset;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tel-number span,
+  .email span {
+    margin-left: 0px;
+  }
+
+  .social-media-icons {
+    flex-direction: column;
+  }
+
+  .social-media-icon {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .social-media-icon i {
+    margin-right: 0px;
   }
 }
